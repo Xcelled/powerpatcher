@@ -10,8 +10,8 @@ Thank you for using Power Patcher! This document will guide you through the inst
   - The most common place is `C:\Nexon\Mabinogi`
   - If you used Steam, it'll be in your [steamapps](https://support.steampowered.com/kb_article.php?ref=7418-YUBN-8129) folder.
   - If you used the new Nexon launcher, it'll be `C:\Nexon\Library\mabinogi\appdata` 
-
-If you see a file called `client`, you're in the right place.
+  
+  If you see a file called `client`, you're in the right place.
 2. Rename Mabinogi.exe to Mabinogi.exe.ppbak
 3. Copy the files from the ZIP folder into your Mabinogi directory
 
