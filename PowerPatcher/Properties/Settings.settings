@@ -14,9 +14,6 @@
     <Setting Name="DeleteContent" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="StartupPage" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://nxcache.nexon.net/mabinogi/launcher/notice.html</Value>
-    </Setting>
     <Setting Name="CustomArgs" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
@@ -34,6 +31,12 @@
     </Setting>
     <Setting Name="WarnIfNotInMabiDir" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="StartupPage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://mabinogi.nexon.net/launcher</Value>
+    </Setting>
+    <Setting Name="TargetName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">client.exe</Value>
     </Setting>
   </Settings>
 </SettingsFile>
