@@ -227,15 +227,15 @@ namespace PowerPatcher
 					args += " " + Program.CmdArgs.First(a => a.ToLower().StartsWith("/p"));
 				}
 
-				Logger.Info("Starting client.exe with the following args: {0}", args);
+				Logger.Info("Starting {0} with the following args: {1}", Properties.Settings.Default.TargetName, args);
 
 				try
 				{
-					Process.Start("client.exe", args);
+					Process.Start(Properties.Settings.Default.TargetName, args);
 				}
 				catch (Exception ex)
 				{
-					Logger.Error("Cannot start Mabbinogi: {0}", ex.ToString());
+					Logger.Error("Cannot start Mabinogi: {0}", ex.ToString());
 					MessageBox.Show("Cannot start Mabinogi: " + ex.Message);
 
 					throw new IOException();

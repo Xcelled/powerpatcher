@@ -61,6 +61,7 @@
 			this.checkBox2 = new System.Windows.Forms.CheckBox();
 			this.checkBox1 = new System.Windows.Forms.CheckBox();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
+			this.label8 = new System.Windows.Forms.Label();
 			this.startGameBtn = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.cancelBtn = new System.Windows.Forms.Button();
@@ -73,7 +74,8 @@
 			this.progressUpdater = new System.Windows.Forms.Timer(this.components);
 			this.progressContainer = new System.Windows.Forms.FlowLayoutPanel();
 			this.closeTimer = new System.Windows.Forms.Timer(this.components);
-			this.label8 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.textBox5 = new System.Windows.Forms.TextBox();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
@@ -215,6 +217,8 @@
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.textBox5);
+			this.groupBox3.Controls.Add(this.label9);
 			this.groupBox3.Controls.Add(this.textBox4);
 			this.groupBox3.Controls.Add(this.label7);
 			this.groupBox3.Controls.Add(this.textBox3);
@@ -271,7 +275,7 @@
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(3, 16);
+			this.label4.Location = new System.Drawing.Point(222, 16);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(125, 13);
 			this.label4.TabIndex = 4;
@@ -282,9 +286,9 @@
 			this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PowerPatcher.Properties.Settings.Default, "CustomArgs", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-			this.textBox2.Location = new System.Drawing.Point(134, 13);
+			this.textBox2.Location = new System.Drawing.Point(353, 13);
 			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(580, 20);
+			this.textBox2.Size = new System.Drawing.Size(361, 20);
 			this.textBox2.TabIndex = 5;
 			this.textBox2.Text = global::PowerPatcher.Properties.Settings.Default.CustomArgs;
 			// 
@@ -443,6 +447,16 @@
 			this.tabPage4.Text = "About";
 			this.tabPage4.UseVisualStyleBackColor = true;
 			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Location = new System.Drawing.Point(3, 9);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(247, 39);
+			this.label8.TabIndex = 0;
+			this.label8.Text = "Power Patcher Copyright © Xcelled194 9/20/2013\r\n\r\nPlease see the README for more " +
+    "information";
+			// 
 			// startGameBtn
 			// 
 			this.startGameBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -556,15 +570,23 @@
 			// 
 			this.closeTimer.Tick += new System.EventHandler(this.closeTimer_Tick);
 			// 
-			// label8
+			// label9
 			// 
-			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(3, 9);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(247, 39);
-			this.label8.TabIndex = 0;
-			this.label8.Text = "Power Patcher Copyright © Xcelled194 9/20/2013\r\n\r\nPlease see the README for more " +
-    "information";
+			this.label9.AutoSize = true;
+			this.label9.Location = new System.Drawing.Point(6, 16);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(72, 13);
+			this.label9.TabIndex = 10;
+			this.label9.Text = "Target Name:";
+			// 
+			// textBox5
+			// 
+			this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PowerPatcher.Properties.Settings.Default, "TargetName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+			this.textBox5.Location = new System.Drawing.Point(84, 13);
+			this.textBox5.Name = "textBox5";
+			this.textBox5.Size = new System.Drawing.Size(122, 20);
+			this.textBox5.TabIndex = 11;
+			this.textBox5.Text = global::PowerPatcher.Properties.Settings.Default.TargetName;
 			// 
 			// Form1
 			// 
@@ -645,6 +667,8 @@
 		private System.Windows.Forms.NumericUpDown cVersionNumber;
 		private System.Windows.Forms.Button writeCustomVersionBtn;
 		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.Label label9;
 	}
 }
 
