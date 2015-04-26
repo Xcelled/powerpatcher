@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="RequireAdmin" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="DeletePartFiles" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

@@ -34,8 +34,8 @@ namespace PowerPatcher
 				Properties.Settings.Default.RequireAdmin = false;
 
 			SetCWD();
-			CheckNexonDir();
 #if !DEBUG
+			CheckNexonDir();
 			CheckAdmin();
 #endif
 			System.Net.ServicePointManager.DefaultConnectionLimit = 100;
@@ -59,12 +59,15 @@ namespace PowerPatcher
 			Logger.Info("Admin required: {0}\tCurrently admin: {1}", Properties.Settings.Default.RequireAdmin, isAdmin);
 			if (Properties.Settings.Default.RequireAdmin && !isAdmin)
 			{
-				System.Diagnostics.ProcessStartInfo proc = new System.Diagnostics.ProcessStartInfo();
-				proc.UseShellExecute = true;
-				proc.WorkingDirectory = Environment.CurrentDirectory;
-				proc.FileName = Application.ExecutablePath;
-				proc.Arguments = string.Join(" ", Environment.GetCommandLineArgs());
-				proc.Verb = "runas";
+				var proc = new System.Diagnostics.ProcessStartInfo
+				{
+					UseShellExecute = true,
+					WorkingDirectory = Environment.CurrentDirectory,
+					FileName = Application.ExecutablePath,
+					Arguments = string.Join(" ", Environment.GetCommandLineArgs()),
+					Verb = "runas"
+				};
+
 				try
 				{
 					System.Diagnostics.Process.Start(proc);
@@ -94,7 +97,6 @@ namespace PowerPatcher
 					return;
 				}
 
-#if !DEBUG
 				if (!string.Equals(Path.GetFullPath(nxdir), Path.GetFullPath(Environment.CurrentDirectory), StringComparison.OrdinalIgnoreCase))
 				{
 					Logger.Warning("Power Patcher is not located in the Mabinogi folder!");
@@ -105,7 +107,6 @@ namespace PowerPatcher
 						Environment.Exit(0);
 					}
 				}
-#endif
 			}
 		}
 
