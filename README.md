@@ -1,3 +1,6 @@
+# Due to a change in the patch process, Power Patcher no longer works and I have no plans to update it. If you need a custom patcher, check here: https://github.com/logicplace/mabi-patch-thing
+
+
 Power Patcher
 ============
 
